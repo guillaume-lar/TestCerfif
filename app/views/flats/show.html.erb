@@ -1,0 +1,27 @@
+<div class="flat-page">
+  <div class="flat-header">
+    <h1><%= @flat.name %></h1>
+    <div class="flat-image">
+      <img src="https://www.vacationkey.com/photos/5/3/53968-5.jpg">
+    </div>
+    <p class="flat-category">Catégorie : <%= @flat.category %></p>
+    <p class="flat-address">Adresse : <%= @flat.address %>, <% @flat.city %> <% @flat.country %></p>
+  </div>
+  <div class="flat-body">
+    <p class="flat-description">Description : <%= @flat.description %></p>
+    <p class="flat-rooms">Nombre de pièces : <%= @flat.room %></p>
+    <p class="flat-price">Prix : <%= @flat.price %> € par nuit</p>
+
+    <% if current_user == @flat.user %>
+  <div class="p-2 text-center">
+    <%= button_to "Delete", flat_path(@flat), method: :delete, class: "btn btn-outline-success" %>
+    <%= button_to "Edit", edit_flat_path(@flat), method: :get, class: "btn btn-outline-info" %>
+    <%= button_to "Update", flat_path(@flat), method: :patch %>
+  </div>
+<% else %>
+  <%= link_to 'Réserver cet appartement', new_flat_reservation_path(@flat), class: 'btn btn-primary' %>
+<% end %>
+
+
+
+</div>

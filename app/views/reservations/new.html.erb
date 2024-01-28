@@ -1,0 +1,19 @@
+<div class="form-container card-color">
+  <h2>A quelle date voulez-vous réserver ce bien?</h2>
+  <p><%= @flat.name %></p> <br>
+  <%= form_with(model: [@flat, @reservation], local: true) do |form| %>
+    <div class="field">
+      <%= form.label :start_reservation %>
+      <%= form.date_field :start_reservation %>
+    </div>
+    <div class="field">
+      <%= form.label :end_reservation %>
+      <%= form.date_field :end_reservation %>
+    </div>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <div class="actions">
+      <%= link_to 'Réserver',  flat_reservations_path(@flat), class: 'btn btn-secondary', method: :post %>
+    </div>
+  <% end %>
+  <%= link_to 'Retour à la liste des logements', flats_path, class: 'btn btn-secondary' %>
+</div>

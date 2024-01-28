@@ -1,0 +1,23 @@
+<div class="index-pages-container body-color">
+  <div class="index-container">
+    <% @pages.each do |flat| %>
+      <div class="cards">
+        <% if flat.present? %>
+          <%= link_to flat_path(flat), class: "card-link" do %>
+            <div class="card-body">
+              <div class="flat-image">
+                <img src="https://www.vacationkey.com/photos/5/3/53968-5.jpg">
+              </div>
+              <h4 class="cutlink"><%= flat.name %></h4>
+              <p><%= flat.description %></p>
+              <p><%= flat.address %></p>
+              <p><%= flat.price %>€/jour</p>
+            </div>
+          <% end %>
+        <% else %>
+          <p>Aucun appartement disponible</p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

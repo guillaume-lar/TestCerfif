@@ -1,0 +1,97 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the form-container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Styling for headings */
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styling for paragraph */
+.form-container p {
+    font-weight: bold;
+}
+
+/* Styling for form fields */
+.field {
+    margin-bottom: 15px;
+}
+
+/* Styling for labels */
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styling for date fields */
+.field input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for hidden fields */
+.field input[type="hidden"] {
+    display: none;
+}
+
+/* Styling for form actions */
+.actions {
+    margin-top: 20px;
+}
+
+/* Styling for buttons */
+.btn {
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    /* Green color */
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #45a049;
+    /* Darker green color on hover */
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    /* Grey color */
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #999;
+    /* Darker grey color on hover */
+}

@@ -1,0 +1,24 @@
+<h1>Mes Réservations</h1>
+<div class="reservation-list">
+  <% if @user_reservations&.any? %>
+    <% @user_reservations.each do |reservation| %>
+  <div class="reservation-item">
+    <% if reservation.flat.image.attached? %>
+      <%= image_tag url_for(reservation.flat.image), alt: reservation.flat.name, class: "reservation-image" %>
+    <% else %>
+      <%= image_tag("https://a0.muscache.com/im/pictures/miso/Hosting-992604588463714327/original/581bd53c-d4fd-4214-bbd2-8b61e33c020b.jpeg", alt: reservation.flat.name, class: "reservation-image") %>
+    <% end %>
+    <div class="reservation-details">
+      <strong><%= reservation.flat.name %></strong><br>
+      <strong>Date de début:</strong> <%= reservation.start_of_reservation %><br>
+      <strong>Date de fin:</strong> <%= reservation.end_of_reservation %><br>
+      <%= link_to "Supprimer ma réservation", reservation_path(reservation), data: { turbo_method: :delete, turbo_confirm: "Es-tu sûr?" }, class: "btn btn-danger" %>
+    </div>
+  </div>
+<% end %>
+
+  <% else %>
+    <p>Vous n'avez aucune réservation pour le moment.</p>
+  <% end %>
+</div>
+

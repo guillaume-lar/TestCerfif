@@ -1,0 +1,74 @@
+/* Reset some default styles */
+body,
+h1,
+p,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the flat-page container */
+.flat-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the flat-header section */
+.flat-header {
+    text-align: center;
+}
+
+.flat-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.flat-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.flat-category,
+.flat-address {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Styling for the flat-body section */
+.flat-body {
+    margin-top: 20px;
+}
+
+.flat-description,
+.flat-rooms,
+.flat-price {
+    margin-bottom: 10px;
+}
+
+.flat-rooms,
+.flat-price {
+    font-weight: bold;
+}
+
+/* Styling for the delete link */
+.flat-body a {
+    display: block;
+    text-align: center;
+    background-color: #4CAF50;
+    /* Green color */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.flat-body a:hover {
+    background-color: #45a049;
+    /* Darker green color on hover */
+}
